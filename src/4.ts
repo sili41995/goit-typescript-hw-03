@@ -22,7 +22,10 @@ abstract class House {
   public person: Person;
   public door: boolean;
 
-  constructor(public key: Key) {}
+  constructor(public key: Key) {
+    this.tenants = [];
+    this.door = false;
+  }
 
   public comeIn(person): void {
     this.door && this.tenants.push(person);
